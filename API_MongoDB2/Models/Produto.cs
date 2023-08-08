@@ -10,9 +10,13 @@ namespace API_MongoDB2.Models
         [BsonElement("Nome")]
         public string Nome { get; set; }
 
-        public Produto(string? id, string nome)
+        public Produto(string nome)
         {
-            Id = id;
+            Nome = nome;
+        }
+
+        public void Atualizar(string nome)
+        {
             Nome = nome;
         }
     }
